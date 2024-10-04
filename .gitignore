@@ -1,0 +1,6 @@
+# Ignore node_modules folder
+node_modules/
+
+
+# Ignore store.json in the view folderr
+views/store.json

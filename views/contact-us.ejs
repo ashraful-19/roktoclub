@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- HTML Meta Tags -->
+  <title>Roktoclub - Central Blood Bank</title>
+  <meta name="description" content="একটি শেয়ার জীবন বাঁচাতে পারে!">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://roktoclub.org">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Roktoclub - Central Blood Bank">
+  <meta property="og:description" content="একটি শেয়ার জীবন বাঁচাতে পারে!">
+  <meta property="og:image" content="https://roktoclub.org/images/web-preview-2.png" />
+  <meta property="fb:app_id" content="813611364267610" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="roktoclub.org">
+  <meta property="twitter:url" content="https://roktoclub.org">
+  <meta name="twitter:title" content="Roktoclub - Save Lives with Blood Donation">
+  <meta name="twitter:description" content="একটি শেয়ার জীবন বাঁচাতে পারে!">
+  <meta name="twitter:image" content="https://roktoclub.org/images/web-preview-2.png">
+
+  <link href="/images/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600&display=swap">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+/>
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <style>
+div.nav-wrap{
+  box-shadow: rgba(0, 0, 0, 0.1) -18px -5px 10px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px!important;
+}
+
+    .overview-section {
+        text-align: center;
+        padding: 30px 0px;
+    }
+    .overview-section p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .overview-section h1 {
+        color: rgb(239 68 68);
+    }
+
+    .contact-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0px 20px;
+        text-align: center;
+    }
+    .contact-section h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    .contact-infor {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .contact-infor div {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 320px;
+        text-align: left;
+    }
+    .contact-infor h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #0077cc;
+    }
+    .contact-infor p {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #555;
+    }
+    .contact-infor i {
+        color: #0077cc;
+        margin-right: 10px;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .social-icons a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #333;
+        transition: background-color 0.3s ease;
+    }
+    .social-icons a:hover {
+        background-color: #0077cc;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f8f8;
+        color: #333;
+        margin-top: 40px;
+    }
+    footer p {
+        margin: 0;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .contact-infor {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-wrap">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/">
+            <img src="/images/logo.png" alt="Logo">
+          </a>                
+        </div>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/about-us">About</a>
+          <a href="/contact-us">Contact</a>
+          <a href="/blood-registration" class="join-donner loader">Join as Donor</a>
+          <a href="/donate-us" style="display: none;">Donate Us</a>
+        </div>
+        <div class="hamburger-menu">
+          <img width="30px" src="https://cdn-icons-png.flaticon.com/512/10308/10308963.png" alt="Menu">
+        </div>
+      </nav>
+      <div class="mobile-nav">
+        <div style="padding: 10px;">
+          <a href="/">Home</a>
+          <a href="/about-us">About</a>
+          <a href="/contact-us">Contact</a>
+          <a href="/blood-registration" class="join-donner loader">Join as Donor</a>
+          <a href="/donate-us" class="join-donner loader donate-us" style="display: none;">Donate Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="overview-section">
+    <h1>যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন</h1>
+  </div>
+
+  <div class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-infor">
+      <!-- Office Address -->
+      <div>
+        <h2>Office Address</h2>
+        <p><i class="fa-solid fa-location-dot"></i>ECB Chattar, Dhaka Cantonment-1206</p>
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <h2>Phone</h2>
+        <p><i class="fa-solid fa-phone"></i>+8801870252403</p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <h2>Email</h2>
+        <p><i class="fa-solid fa-envelope"></i>ashrafulashik0177@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" title="Facebook" style="background-color: #3b5998;">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" title="LinkedIn" style="background-color: #0077b5;">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" title="Twitter" style="background-color: #1da1f2;">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" title="Instagram" style="background-color: #e1306c;">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+<br><br><br><br>
+<%- include('partials/footer') %>
+
+  <!-- JavaScript -->
+  <script>
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    hamburgerMenu.addEventListener('click', () => {
+      mobileNav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

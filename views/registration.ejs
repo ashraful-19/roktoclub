@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- HTML Meta Tags -->
+<title>Roktoo - রক্ত দেই, জীবন বাঁচাই</title>
+<meta name="description" content="একটি শেয়ার জীবন বাঁচাতে পারে!">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://roktoo.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Roktoo - রক্ত দেই, জীবন বাঁচাই">
+<meta property="og:description" content="একটি শেয়ার জীবন বাঁচাতে পারে!">
+<meta property="og:image" content="https://roktoo.com/images/web-preview-2.png" />
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="roktoo.com">
+<meta property="twitter:url" content="https://roktoo.com">
+<meta name="twitter:title" content="Roktoo - Save Lives with Blood Donation">
+<meta name="twitter:description" content="একটি শেয়ার জীবন বাঁচাতে পারে!">
+<meta name="twitter:image" content="https://roktoo.com/images/web-preview-2.png">
+  
+
+  <link href="/images/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.3/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <style>
+       #donor-modal.modal {
+    display: block!important; 
+    background: none!important;
+    position: static;
+}
+
+#donor-modal .modal-content {
+    box-shadow: none;
+    border: none;
+}
+
+
+  </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-wrap">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="Logo">
+                    </a>                
+                  </div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about-us">About</a>
+                    <a href="/contact-us">Contact</a>
+                    <a href="/blood-registration" class="join-donner loader">Join as Donor</a>
+                    <a href="/donate-us" style="display: none;">Donate Us</a>
+                </div>
+                <div class="hamburger-menu">
+                    <img width="30px" src="https://cdn-icons-png.flaticon.com/512/10308/10308963.png" alt="">
+                </div>
+            </nav>
+            <div class="mobile-nav">
+          <div style="padding: 10px;">
+            <a href="/">Home</a>
+            <a href="/about-us">About</a>
+            <a href="/contact-us">Contact</a>
+            <a href="/blood-registration" class="join-donner loader">Join as Donor</a>
+            <a href="/donate-us" class="join-donner loader donate-us" style="display: none;">Donate Us</a>
+          </div>
+            </div>
+        </div>
+      
+    </header>
+    <main style="display: none;">
+        <div class="search-filters">
+            <h2 style="text-align: center; width: 100%; font-family: 'Hind Siliguri';">রক্ত খুঁজুন</h2>
+            <select id="blood-group-search" name="blood-group" class="card">
+                <option value="">Choice Blood</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <select id="division-search" name="division">
+                <option value="">Choice Division</option>
+                <!-- Options will be populated dynamically -->
+            </select>
+
+            <select id="district-search" name="district">
+                <option value="">Choice District</option>
+                <!-- Options will be populated dynamically based on selected division -->
+            </select>
+            <select id="upazila-search" name="upazila">
+                <option value="">Choice City/Upazila</option>
+                <!-- Options will be populated dynamically based on selected district -->
+            </select>
+        </div>
+
+    </main>
+
+
+<!-- Modal Structure -->
+<div id="donor-modal" class="modal">
+  <div class="modal-content">
+    <button class="close" style="display: none;">Skip </button>
+    <h2 style="padding-right: 90px;"> <span style="color:rgb(255, 0, 85)">রক্তদাতা</span> হতে চাইলে ফর্মটি পূরণ করুন</h2>
+      <form id="donor-form">
+          <input type="text" id="name" name="name" placeholder="Ex: Md Ashraful Islam" required>
+          <select id="blood-group" name="blood-group" required>
+            <option value="">Choice Blood</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+          </select>
+          <label for="area" style="color: rgb(239 68 68);"><b>আপনার বর্তমান ঠিকানা দিন</b></label>
+
+          <select id="division" name="division" required>
+              <option value="">Choice Division</option>
+          </select>
+
+          <select id="district" name="district" required>
+              <option value="">Choice District</option>
+          </select>
+
+          <select id="upazila" name="upazila" required>
+              <option value="">Choice City/Upazila</option>
+          </select>
+
+          <input type="tel" id="phone" name="phone" placeholder="Enter Phone number" required>
+
+          <input type="text" id="fb-id" name="fb-id" placeholder="Facebook Id link (Optional)">
+          
+          <input type="text" id="age" name="age" placeholder="Your age" required>
+
+          <label for="past-donation" style="color: rgb(239 68 68);"><b>আগে রক্ত দিয়েছিলেন:</b></label>
+          <div class="past-donation-wrap">
+              <label><input type="radio" name="past-donation" value="Yes" required> Yes</label>
+              <label><input type="radio" name="past-donation" value="No" required> No</label>
+          </div>
+          <br>
+          <div id="last-donation-container" class="hidden modal-content-last-date">
+              <label for="last-donation" style="color: rgb(239 68 68);"><b>শেষ রক্তদানের সময়:</b></label>
+              <input type="date" id="last-donation" name="last-donation">
+              <br>
+              <label for="donated" style="color: rgb(239 68 68);"><b>কতবার দিয়েছিলেন:</b></label>
+              <input type="text" id="donated" name="donated">
+            </div>
+          <label style="color: rgb(239 68 68);"><b>Profession:</b></label>
+          <div class="profession-wrap">
+              <label><input type="radio" name="profession" value="Student" required> Student</label>
+              <label><input type="radio" name="profession" value="Worker" required> Job</label>
+          </div>
+          <br>
+          <input type="text" id="institute" name="institute" placeholder="Institute(Working Place/University) (Optional)">
+          <label for="referral" style="color: rgb(239 68 68);"><b>আমাদের সম্পর্কে কিভাবে জানলেন?</b></label>
+          <select id="referral" name="referral">
+            <option value="" disabled selected>Select an option</option>
+            <option value="friend_or_family">বন্ধু অথবা পরিবার</option>
+            <option value="social_media">সামাজিক যোগাযোগ মাধ্যম</option>
+            <option value="social_media">স্বেচ্ছাসেবক</option>
+            <option value="google_search">গুগুল সার্চ</option>
+            <option value="blog_or_article">ব্লগ অথবা আর্টিক্যাল</option>
+            <option value="event_or_webinar">ইভেন্ট</option>
+            <option value="other">অন্যান্য</option>
+          </select>
+          <label for="referral_code" style="color: rgb(239 68 68);"><b>রেফার কোড (যদি থাকে):</b></label>
+          <input type="text" id="referral_code" name="referral_code" placeholder="Enter referral code">          
+          <label>
+            <input type="checkbox" id="terms" checked required>
+            I accept the <a href="/terms-and-conditions" target="_blank">terms and conditions</a>.
+          </label> 
+          <br>
+          <button type="submit" id="submit-donor-form">Submit</button>
+          <div class="loading-overlay">
+              <div class="loader-1"></div>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="donate-us-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <form action="/process-payment" method="GET">
+      <span class="close">&times;</span>
+      <div class="secure-payment"><svg fill="none" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg" class="icon-fill d-block" bis_size="{&quot;x&quot;:848,&quot;y&quot;:44,&quot;w&quot;:28,&quot;h&quot;:28,&quot;abs_x&quot;:848,&quot;abs_y&quot;:44}"><g fill="currentColor" bis_size="{&quot;x&quot;:850,&quot;y&quot;:44,&quot;w&quot;:24,&quot;h&quot;:27,&quot;abs_x&quot;:850,&quot;abs_y&quot;:44}"><path clip-rule="evenodd" d="m15.0393 2.44995c-.6707-.24772-1.4079-.24772-2.0786 0l-8.30715 3.06797c-.39274.14504-.65355.51939-.65355.93807v7.54411c0 3.6861 1.95965 6.6874 4.28911 8.8073 1.16017 1.0557 2.38789 1.8689 3.45309 2.4137 1.1081.5668 1.9145.779 2.2578.779s1.1497-.2122 2.2578-.779c1.0652-.5448 2.2929-1.358 3.4531-2.4137 2.3294-2.1199 4.2891-5.1212 4.2891-8.8073v-7.54411c0-.41868-.2608-.79303-.6536-.93807zm-2.7715-1.876139c1.1179-.412868 2.3465-.412868 3.4644 0l8.3071 3.067969c1.1783.43514 1.9607 1.55819 1.9607 2.81421v7.54411c0 4.4389-2.3618 7.9375-4.943 10.2865-1.2952 1.1786-2.6702 2.092-3.8885 2.7151-1.1754.6012-2.3332.9984-3.1685.9984s-1.9931-.3972-3.1685-.9984c-1.21831-.6231-2.59328-1.5365-3.88847-2.7151-2.58125-2.349-4.94303-5.8476-4.94303-10.2865v-7.54411c0-1.25602.78243-2.37907 1.96066-2.81421z" fill-rule="evenodd" bis_size="{&quot;x&quot;:850,&quot;y&quot;:44,&quot;w&quot;:24,&quot;h&quot;:27,&quot;abs_x&quot;:850,&quot;abs_y&quot;:44}"></path><path d="m18.2906 11.75h-.2535v-1.1855c0-2.19278-1.7415-4.02451-3.9182-4.06361-.0595-.00107-.1783-.00107-.2378 0-2.1767.0391-3.91819 1.87083-3.91819 4.06361v1.1855h-.25354c-.39069 0-.70937.4028-.70937.9003v5.9463c0 .4969.31868.9035.7094.9035h8.5812c.3907 0 .7094-.4066.7094-.9035v-5.9463c0-.4974-.3187-.9003-.7094-.9003zm-3.4867 3.8674v1.7967c0 .2058-.1723.3799-.3784.3799h-.8509c-.2061 0-.3785-.1741-.3785-.3799v-1.7967c-.1999-.1966-.3162-.4684-.3162-.7691 0-.5698.4408-1.0594 1.0013-1.082.0594-.0024.1783-.0024.2377 0 .5605.0226 1.0013.5122 1.0013 1.082 0 .3007-.1164.5725-.3163.7691zm1.5623-3.8674h-4.7323v-1.1855c0-1.30621 1.0623-2.38623 2.3661-2.38623s2.3662 1.08002 2.3662 2.38623z" bis_size="{&quot;x&quot;:857,&quot;y&quot;:50,&quot;w&quot;:10,&quot;h&quot;:13,&quot;abs_x&quot;:857,&quot;abs_y&quot;:50}"></path></g></svg><h2>Secure Payment</h2></div>
+      <p>Select an amount or enter your donation:</p>
+      <div class="amount-buttons">
+        <button type="button" class="amount-btn" data-amount="100">৳ 100</button>
+        <button type="button" class="amount-btn" data-amount="500">৳ 500</button>
+        <button type="button" class="amount-btn" data-amount="1000">৳ 1000</button>
+        <button type="button" class="amount-btn" data-amount="2000">৳ 2000</button>
+        <button type="button" class="amount-btn" data-amount="5000">৳ 5000</button>
+      </div>
+      <div class="input-wrapper">
+        <input type="number" id="donationAmount" placeholder="Enter amount" name="donation" min="1" value="1000">
+        <span class="currency-label">BDT</span>
+    </div>
+      <button type="submit" id="donateButton">Donate</button>
+</form>
+  </div>
+  <!-- Loading overlay -->
+  <div class="loading-overlay">
+      <div class="loader-1"></div>
+  </div>
+</div>
+
+
+<%- include('partials/footer') %>
+
+</body>
+</html>
+
+
+
+<script src="/assets/main.js"></script>

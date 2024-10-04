@@ -1,0 +1,797 @@
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Scrollbar styles for WebKit (Chrome, Safari) */
+html::-webkit-scrollbar {
+    width: 14px; /* Increased width for better visibility */
+}
+
+html::-webkit-scrollbar-track {
+    background: #ffd6e7; /* Softer pink background for the track */
+    border-radius: 10px; /* Rounded edges on the track */
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(239 68 68); /* More vibrant pink for the thumb */
+    border-radius: 12px; /* Smooth rounded corners for the thumb */
+    border: 3px solid #ffd6e7; /* A lighter pink border around the thumb for contrast */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #ff3399; /* Slightly darker pink when hovered */
+    border: 2px solid #ffe6f0; /* Thinner border on hover for subtle animation */
+}
+
+/* Scrollbar styles for Firefox */
+body {
+    scrollbar-width: auto; /* Automatically adjust width */
+    scrollbar-color: rgb(239 68 68) #ffd6e7; /* Vibrant pink thumb, softer pink track */
+}
+
+/* Firefox scrollbar track */
+body::-moz-scrollbar-track {
+    background: #ffd6e7; /* Softer pink for track */
+}
+
+/* Firefox scrollbar thumb */
+body::-moz-scrollbar-thumb {
+    background-color: rgb(239 68 68); /* Bright pink thumb */
+    border-radius: 12px;
+    border: 3px solid #ffd6e7; /* Lighter border for thumb contrast */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+
+header {
+    width: 100%;
+    position: relative;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+
+.hero-banner {
+    background-image: url(https://media.istockphoto.com/id/1401295466/vector/halftone-spotted-background.jpg?s=612x612&w=0&k=20&c=ql7PRJ1ffHk-Zkj4cDeePpLzmqAPzgIVtfBkCsoqK2Q=);
+        background-position: center center !important;
+        /* https://img.freepik.com/premium-photo/white-paper-with-white-background-that-says-rectangle_1278706-20508.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1726790400&semt=ais_hybrid */
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    
+}
+
+.hero-buttons{
+  display: flex;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0px 30px 0px 30px;
+    
+  }
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    color: rgb(239 68 68);
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+
+.action-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+.search-filters {
+    position: relative;
+    bottom: 50px;
+    margin: 20px 0;
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding: 15px 15px;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.past-donation-wrap, .profession-wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+
+}
+input[type="checkbox"] {
+    background: #990000;    
+}
+
+.chk {
+   background-color: #990000;
+}
+
+.past-donation-wrap label, .profession-wrap label{
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+
+.search-filters select 
+{
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1em;
+    margin:0px 10px;
+    flex: 1 1 calc(20% - 10px);
+    min-width: 150px;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+    background: #eeeeee;
+}
+
+
+select {
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px; 
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+ select:focus {
+  border: none;
+  outline: none; 
+}
+/* Remove default styling and add custom styles for option elements */
+option {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+
+/* Optional: Custom arrow styling */
+select::after {
+  content: "▼"; /* Unicode for downward arrow */
+  font-size: 16px;
+  color: #333;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.table-container {
+    position: relative;
+    overflow-x: auto;
+    margin: 20px;
+    max-height: 800px;
+}
+
+/* Scrollbar styles for WebKit (Chrome, Safari) */
+.table-container::-webkit-scrollbar {
+    width: 12px; /* Adjust scrollbar width */
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #ffe6f0; /* Light pink background for the track */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: rgb(239 68 68); /* Bright pink for the thumb */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #ffe6f0; /* Padding around thumb */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(239 68 68); /* Darker pink when hovered */
+}
+
+/* Scrollbar styles for Firefox */
+.table-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(239 68 68) #ffe6f0;
+}
+
+/* Firefox scrollbar track */
+.table-container::-moz-scrollbar-track {
+    background: #ffe6f0; /* Same light pink track */
+}
+
+/* Firefox scrollbar thumb */
+.table-container::-moz-scrollbar-thumb {
+    background-color: rgb(239 68 68); /* Bright pink */
+    border-radius: 10px;
+    border: 3px solid #ffe6f0;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Adjust table layout for responsiveness */
+}
+
+thead {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+th {
+    background-color: rgb(239 68 68);
+    color: white;
+}
+
+td a {
+  text-decoration: none; 
+  color: inherit; 
+  font-weight: normal;
+}
+
+tbody{
+    overflow: scroll;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #ececec;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .action-buttons button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+        margin: 5px;
+    }
+
+    .search-filters select {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+      }
+
+    table {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+  
+  .hero-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+    .hero-text h1 {
+        font-size: 1.5em;
+        width: 250px;
+        margin: 0px auto;
+      }
+    .mobile-nav a {
+    padding: 10px!important;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+}
+
+    div.nav-wrap{
+    padding: 5px!important;
+}
+.navbar{
+    padding: 10px 15px;
+}
+.modal-content h2{
+    font-size: 1rem;
+}
+    .hero-banner {
+    height: 350px!important;
+    
+}
+
+
+    .hero-text p {
+        font-size: 0.9em;
+    }
+
+    .action-buttons button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+        margin: 5px;
+    }
+
+    .hero-banner {
+    background-image: url(https://media.istockphoto.com/id/1401295466/vector/halftone-spotted-background.jpg?s=612x612&w=0&k=20&c=ql7PRJ1ffHk-Zkj4cDeePpLzmqAPzgIVtfBkCsoqK2Q=);
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    
+}
+
+    .search-filters select {
+        padding: 8px;
+        font-size: 0.9em;
+        display: block!important;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+}
+
+
+
+/* Modal CSS */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 0px auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 600px; 
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-50px); 
+    margin-top: 70px;
+}
+
+
+.modal-content-last-date {
+    background-color: #fefefe;
+    margin: 0px auto; /* Centered */
+    padding: 20px;
+    width: 90%; 
+    max-width: 600px; 
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+.modal-content.show {
+    transform: translateY(0); /* Modal slides in */
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+}
+
+.modal-content input,
+.modal-content select {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #d1d1d19e;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.modal-content button {
+    padding: 8px 15px;
+    background-color: rgb(239 68 68);
+    color: white;
+    border: none;
+    border-radius: 4px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #fd3579;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+
+}
+
+
+/* CSS for Hidden and Animation */
+.hidden {
+    display: none;
+}
+
+#last-donation-container{ 
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    max-width: 600px;
+    position: relative;
+ }
+
+.last-donation-container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.last-donation-container.show {
+    display: block; /* Ensure it’s shown */
+    opacity: 1; /* Fade in effect */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+        margin: 20% auto;
+    }
+
+    .modal-content input,
+    .modal-content select,
+    .modal-content button {
+        font-size: 0.9em; /* Slightly smaller font size on small screens */
+    }
+}
+
+
+/* Navbar Styles */
+div.nav-wrap{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 8px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 15px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin: 0px auto;
+    position: relative;
+    width: 90%;
+
+}
+
+.logo img {
+    height: 27px;
+    margin-top: 7px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 15px;
+    margin-left: 10px;
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.loader {
+  background: #000;
+  box-shadow: 0 0 0 0 #0004;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+    100% {box-shadow: 0 0 0 10px #0000}
+}
+
+.loading-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.12); 
+    display: none; 
+    justify-content: center; 
+    align-items: center;
+    z-index: 1000; 
+}
+
+.loader-1 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: l16 1s infinite linear;
+}
+.loader-1::before,
+.loader-1::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.loader-1::before {
+  border-color: #f03355 #0000;
+  animation: inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+
+
+.loader-1::after {
+  margin: 8px;
+}
+@keyframes l16 { 
+  100%{transform: rotate(1turn)}
+}
+/* Mobile Nav Styles */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+}
+
+
+.mobile-nav a {
+    padding: 10px;
+    margin: 2px 0px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+.mobile-nav a:hover {
+    background-color: #f8f8f8;
+ }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-nav.show {
+        display: flex;
+    }
+}
+
+.join-donner{
+    background-color: rgb(239 68 68);
+    border-radius: 10px!important;
+    color: white !important;
+}
+.join-donner:hover{
+    background-color: #414141!important;
+    border-radius: 10px;
+    color: rgb(255, 255, 255) !important;
+}
+
+
+.selected {
+    border: 2px solid rgb(239 68 68)!important; 
+    background-color: none;
+}
+
+.secure-payment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.secure-payment svg{
+    color: #00c07b;
+    height: 28px;
+    width: 28px;
+}
+
+.secure-payment h2{
+    color: #222832;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 5px;
+}
+
+
+button.amount-btn{
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    color: black;
+    padding: 10px 10px;
+}
+
+button.amount-btn:hover{
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    color: black;
+    padding: 10px 20px;
+}
+
+.amount-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px 5px;
+    margin-bottom: 20px;
+}
+
+
+#donate-us-modal .modal-content{
+    max-width: 450px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#donationAmount {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box; 
+    font-size: 1.5rem;
+    color: #6874ff;
+}
+
+.currency-label {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #b5b5b5; 
+    pointer-events: none; 
+}
+
+
+.real-number{
+    display: none;
+    color: #c3005b;
+    font-weight: bold;
+}
+
+.hidden-number{
+    display: block;
+}
+
+
+
+/* footer section */
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info span {
+    display: inline;
+    margin: 0 10px; /* Space between items */
+    color: #555;
+}
+
+.contact-info a {
+    color: #007BFF; /* Link color */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
